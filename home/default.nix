@@ -9,6 +9,7 @@
     ./neovim.nix
     ./spotifyd.nix
     ./rofi.nix
+    ./kitty.nix
   ];
   programs.home-manager.enable = true;
 
@@ -38,8 +39,8 @@
       "$HOME/.local/bin"
     ];
     sessionVariables = {
-      HOME_NIX = "$HOME/.config/nixpkgs/home.nix";
-      SYS_NIX = "/etc/nixos/configuration.nix";
+      HOME_NIX = "$HOME/nixos/home/default.nix";
+      SYS_NIX = "$HOME/nixos/configuration.nix";
       PI = "192.168.0.198";
       VFLAGS = "-cc ${pkgs.tinycc}/bin/tcc -cflags -I ${pkgs.tinycc}/lib/tcc/include -I ${pkgs.glibc.dev}/include -I $HOME/.v/thirdparty/tcc/lib/tcc/include -L $HOME/.v/thirdparty/tcc/lib -ltcc -DCUSTOM_DEFINE_no_backtrace";
     };
