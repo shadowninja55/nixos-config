@@ -26,6 +26,7 @@
       nvim-lspconfig
       lspkind-nvim
       completion-nvim
+      completion-buffers
       ctrlp-vim
       vim-fugitive
       dracula-nvim
