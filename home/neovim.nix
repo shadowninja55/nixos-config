@@ -42,6 +42,7 @@
       lexima-vim
       vim-closetag
       presence-nvim
+      nvim-ts-rainbow
     ];
     extraConfig = ''
       lua << 
