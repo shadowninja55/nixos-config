@@ -34,6 +34,7 @@
       bottom
       neofetch
       lunar-client
+      nix-prefetch-scripts
     ];
     sessionPath = [
       "$HOME/.local/bin"
