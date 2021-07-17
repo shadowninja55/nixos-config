@@ -31,6 +31,11 @@
     };
   };
 
+  zramSwap = {
+    enable = true;
+    algorithm = "lz4";
+  };
+
   services.xserver = {
     enable = true;
     videoDrivers = [ "amdgpu" ];
