@@ -10,6 +10,7 @@
     ./spotifyd.nix
     ./rofi.nix
     ./kitty.nix
+    ./fish.nix
   ];
   programs.home-manager.enable = true;
 
@@ -76,11 +77,6 @@
     enable = true;
     userName = "shadowninja55";
     userEmail = "shadowninja1050@gmail.com";
-  };
-
-  programs.fish = {
-    enable = true;
-    # shellInit = "direnv hook fish | source";
   };
 
   programs.direnv = {
