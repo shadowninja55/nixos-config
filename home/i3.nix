@@ -5,7 +5,7 @@
     config = {
       modifier = "Mod4";
       terminal = "kitty";
-      menu = "\"rofi -modi drun,run -show drun\"";
+      menu = "\"rofi -modi drun -show drun\"";
       bars = [ ];
       keybindings = let mod = "Mod4"; in lib.mkOptionDefault {
         "${mod}+c" = "kill";

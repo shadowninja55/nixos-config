@@ -22,6 +22,7 @@
     packages = with pkgs; [
       firefox
       discord
+      element-desktop
       pulseaudio
       gh
       steam
@@ -44,7 +45,7 @@
       HOME_NIX = "$HOME/nixos/home/default.nix";
       SYS_NIX = "$HOME/nixos/configuration.nix";
       PI = "192.168.0.198";
-      VFLAGS = "-cc ${pkgs.tinycc}/bin/tcc -cflags -I ${pkgs.tinycc}/lib/tcc/include -I ${pkgs.glibc.dev}/include -I $HOME/.v/thirdparty/tcc/lib/tcc/include -L $HOME/.v/thirdparty/tcc/lib -ltcc -DCUSTOM_DEFINE_no_backtrace";
+      VFLAGS = "-cc ${pkgs.tinycc}/bin/tcc -cflags -I${pkgs.tinycc}/lib/tcc/include -cflags -I${pkgs.glibc.dev}/include -cflags -I$HOME/.v/thirdparty/tcc/lib/tcc/include -cflags -L$HOME/.v/thirdparty/tcc/lib -cflags -ltcc cflags -L${pkgs.gcc}/lib -cflags -DCUSTOM_DEFINE_no_backtrace";
     };
   };
 
