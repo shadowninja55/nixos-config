@@ -1,13 +1,13 @@
 { pkgs, lib, config, ... }:
 
 {
-  services.polybar = {
+  services.polybar = rec {
     enable = true;
     package = pkgs.polybar.override {
       i3GapsSupport = true;
       pulseSupport = true;
     };
-    script = "${pkgs.polybar}/bin/polybar dracula &";
+    script = "${package}/bin/polybar dracula &";
     settings = {
       "colors" = {
         background = {
