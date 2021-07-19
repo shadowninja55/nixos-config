@@ -14,5 +14,8 @@
         };
       }
     ];
+    shellInit = ''
+      set fish_greeting
+    '';
   };
 }
