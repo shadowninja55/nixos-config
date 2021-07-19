@@ -43,9 +43,8 @@
     ];
     sessionVariables = {
       HOME_NIX = "$HOME/nixos/home/default.nix";
-      SYS_NIX = "$HOME/nixos/configuration.nix";
+      SYS_NIX = "$HOME/nixos/system.nix";
       PI = "192.168.0.198";
-      VFLAGS = "-cc $HOME/dev/nix/tccwrapper/tccwrapper";
     };
   };
 
