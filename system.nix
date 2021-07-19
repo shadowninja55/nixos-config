@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, nixpkgs, ... }:
 
 {
   imports =
@@ -145,6 +145,7 @@
     extraOptions = ''
       experimental-features = nix-command flakes
     '';
+    registry.nixpkgs.flake = nixpkgs;
   };
 
   programs = {

@@ -1,6 +1,4 @@
 {
-  description = "nixos config flake";
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
@@ -8,15 +6,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-
   outputs = { home-manager, nixpkgs, ... }: {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs.nixpkgs = nixpkgs;
         modules = [
           ./system.nix
-          home-manager.nixosModules.home-manager
-          {
+          home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.mark = import ./home;
