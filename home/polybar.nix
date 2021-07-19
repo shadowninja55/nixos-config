@@ -7,7 +7,7 @@
       i3GapsSupport = true;
       pulseSupport = true;
     };
-    script = "polybar dracula &";
+    script = "${pkgs.polybar}/bin/polybar dracula &";
     settings = {
       "colors" = {
         background = {

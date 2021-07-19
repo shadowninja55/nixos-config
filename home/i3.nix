@@ -1,20 +1,20 @@
-{ lib, ... }:
+{ pkgs, lib, ... }:
 {
   xsession.windowManager.i3 = {
     enable = true;
     config = {
       modifier = "Mod4";
-      terminal = "kitty";
-      menu = "\"rofi -modi drun -show drun\"";
+      terminal = "${pkgs.kitty}/bin/kitty";
+      menu = "\"${pkgs.rofi}/bin/rofi -modi drun -show drun\"";
       bars = [ ];
       keybindings = let mod = "Mod4"; in lib.mkOptionDefault {
         "${mod}+c" = "kill";
-        "${mod}+p" = "exec maim -suq | xclip -selection clipboard -t image/png";
-        "${mod}+Shift+p" = "exec maim -uq | xclip -selection clipboard -t image/png";
+        "${mod}+p" = "exec ${pkgs.maim}/bin/maim -suq | ${pkgs.xclip}/bin/xclip -selection clipboard -t image/png";
+        "${mod}+Shift+p" = "exec ${pkgs.maim}/bin/maim -uq | ${pkgs.xclip}/bin/xclip -selection clipboard -t image/png";
         "${mod}+Shift+f" = "floating toggle";
-        "XF86AudioRaiseVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status";
-        "XF86AudioLowerVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status";
-        "XF86AudioMute" = "exec pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status";
+        "XF86AudioRaiseVolume" = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status";
+        "XF86AudioLowerVolume" = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status";
+        "XF86AudioMute" = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status";
         "${mod}+Ctrl+Left" = "workspace prev";
         "${mod}+Ctrl+Right" = "workspace next";
         "Mod1+Tab" = "workspace back_and_forth";
@@ -45,11 +45,11 @@
       };
       startup = [
         {
-          command = "systemctl --user restart polybar";
+          command = "${pkgs.systemd}/bin/systemctl --user restart polybar";
           notification = false;
         }
         {
-          command = "i3-msg workspace 1";
+          command = "${pkgs.i3-gaps}/bin/i3-msg workspace 1";
           notification = false;
         }
       ];
