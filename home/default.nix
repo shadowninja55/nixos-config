@@ -42,8 +42,8 @@
       "$HOME/.local/bin"
     ];
     sessionVariables = {
-      HOME_NIX = "$HOME/.config/nixos/home/default.nix";
-      SYS_NIX = "$HOME/.config/nixos/system.nix";
+      HOME_NIX = toString ./home/default.nix;
+      SYS_NIX = toString ./system.nix;
       PI = "192.168.0.198";
     };
   };
