@@ -8,8 +8,7 @@
     vimdiffAlias = true;
     plugins = let dracula-nvim = pkgs.vimUtils.buildVimPlugin {
       name = "dracula.nvim";
-      src = pkgs.fetchFromGitHub {
-        owner = "Mofiqul";
+      src = pkgs.fetchFromGitHub { owner = "Mofiqul";
         repo = "dracula.nvim";
         rev = "2f98ce06c359fa3f9c34d274615b3f269f89e55c";
         sha256 = "1grnkar29hydq3idmd3w1v3bsac9byj467fdygmi01khp2klqgv6";
@@ -27,7 +26,10 @@
       lspkind-nvim
       completion-nvim
       completion-buffers
-      ctrlp-vim
+      telescope-nvim
+      telescope-fzy-native-nvim
+      plenary-nvim
+      popup-nvim
       vim-fugitive
       dracula-nvim
       nvim-web-devicons
