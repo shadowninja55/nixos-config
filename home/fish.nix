@@ -14,6 +14,9 @@
         };
       }
     ];
+    shellAliases = {
+      ssh = "kitty +kitten ssh";
+    };
     shellInit = ''
       set fish_greeting
     '';
