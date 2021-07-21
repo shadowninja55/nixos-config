@@ -46,7 +46,16 @@
   services.xserver = {
     enable = true;
     videoDrivers = [ "amdgpu" ];
-    displayManager.lightdm.enable = true;
+    displayManager.lightdm = {
+      enable = true;
+      greeters.webkit2 = {
+        enable = true;
+        /* webkitTheme = fetchTarball {
+          url = "https://github.com/Litarvan/lightdm-webkit-theme-litarvan/releases/download/v3.2.0/lightdm-webkit-theme-litarvan-3.2.0.tar.gz";
+          sha256 = "10j7vg11mhs0mhl9r4j01zfq8naszkdhanxf84b02m1irz063wsd";
+        }; */
+      };
+    };
     windowManager.i3 = {
       enable = true;
       package = pkgs.i3-gaps;
