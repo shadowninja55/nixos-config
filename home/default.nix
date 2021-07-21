@@ -23,21 +23,24 @@
       firefox
       discord
       element-desktop
-      pulseaudio
-      gh
       steam
+      lunar-client
+      gnome.seahorse
+      bitwarden
+      mpv
+
+      gh
       ranger
       tldr
       spotify-tui
-      gnome.seahorse
-      bitwarden
-      pyright
-      rnix-lsp
       bottom
       neofetch
-      lunar-client
       nix-prefetch-scripts
-      mpv
+      nix-index
+
+      pulseaudio
+      pyright
+      rnix-lsp
     ];
     sessionPath = [
       "$HOME/.local/bin"
