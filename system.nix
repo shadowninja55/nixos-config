@@ -1,16 +1,16 @@
 { pkgs, nixpkgs, ... }:
 
-{
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
+let dracula-grub-theme = pkgs.callPackage ./derivations/dracula-grub-theme {}; in {
+  imports = [
+    ./hardware-configuration.nix
+  ];
 
   boot.loader.grub = {
     enable = true;
     version = 2;
     device = "/dev/sda"; 
     useOSProber = true;
+    extraConfig = "set theme=${dracula-grub-theme}/grub/themes/dracula/theme.txt";
   };
 
   networking.hostName = "nixos";
@@ -121,7 +121,7 @@
   };
 
   environment = {
-    systemPackages = let dracula-grub-theme = pkgs.callPackage ./derivations/dracula-grub-theme {}; in with pkgs; [
+    systemPackages = with pkgs; [
       fish
       direnv
       neovim
