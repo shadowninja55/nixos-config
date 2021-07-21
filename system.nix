@@ -1,6 +1,6 @@
 { pkgs, nixpkgs, ... }:
 
-let dracula-grub-theme = pkgs.callPackage ./derivations/dracula-grub-theme {}; in {
+{
   imports = [
     ./hardware-configuration.nix
   ];
@@ -9,8 +9,15 @@ let dracula-grub-theme = pkgs.callPackage ./derivations/dracula-grub-theme {}; i
     enable = true;
     version = 2;
     device = "/dev/sda"; 
-    useOSProber = true;
-    extraConfig = "set theme=${dracula-grub-theme}/grub/themes/dracula/theme.txt";
+    useOSProber = true; 
+    theme = pkgs.fetchFromGitHub {
+      owner = "dracula";
+      repo = "grub";
+      rev = "ad5b6bd4b159fea4950918a5510864ebb551519d";
+      sha256 = "12c76qs6p0fpbn4c3i0va5ibr711fgdhhh4ci86hmd5ss93p4b5y";
+    } + "/dracula";
+    splashImage = null;
+    gfxmodeBios = "1920x1080";
   };
 
   networking.hostName = "nixos";
@@ -131,7 +138,6 @@ let dracula-grub-theme = pkgs.callPackage ./derivations/dracula-grub-theme {}; i
       gnumake
       patchelf
       polkit
-      dracula-grub-theme
     ];
     variables = {
       EDITOR = "nvim";
