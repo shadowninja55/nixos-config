@@ -54,6 +54,8 @@
           url = "https://github.com/Litarvan/lightdm-webkit-theme-litarvan/releases/download/v3.2.0/lightdm-webkit-theme-litarvan-3.2.0-nixos.tar.gz";
           sha256 = "10j7vg11mhs0mhl9r4j01zfq8naszkdhanxf84b02m1irz063wsd";
         };
+        debugMode = true;
+        detectThemeErrors = false;
       }; */
     };
     windowManager.i3 = {
