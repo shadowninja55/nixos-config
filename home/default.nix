@@ -36,7 +36,6 @@
       bottom
       neofetch
       nix-prefetch-scripts
-      nix-index
 
       pulseaudio
       pyright
