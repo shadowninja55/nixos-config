@@ -43,13 +43,14 @@
       nodePackages.vscode-html-languageserver-bin
       nodePackages.vscode-css-languageserver-bin
       nodePackages.typescript-language-server
+      rust-analyzer
     ];
     sessionPath = [
       "$HOME/.local/bin"
     ];
     sessionVariables = {
-      HOME_NIX = toString ./home/default.nix;
-      SYS_NIX = toString ./system.nix;
+      HOME_NIX = "$HOME/.config/nixos/home/default.nix";
+      SYS_NIX = "$HOME/.config/nixos/system.nix";
       PI = "192.168.0.198";
     };
   };
