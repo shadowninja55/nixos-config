@@ -121,18 +121,17 @@
   };
 
   environment = {
-    systemPackages = with pkgs; [
+    systemPackages = let dracula-grub-theme = pkgs.callPackage ./derivations/dracula-grub-theme {}; in with pkgs; [
       fish
       direnv
       neovim
       git
       kitty
       gcc
-      glibc
-      glibc.dev
       gnumake
       patchelf
       polkit
+      dracula-grub-theme
     ];
     variables = {
       EDITOR = "nvim";
