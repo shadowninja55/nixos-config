@@ -40,6 +40,9 @@
       pulseaudio
       pyright
       rnix-lsp
+      nodePackages.vscode-html-languageserver-bin
+      nodePackages.vscode-css-languageserver-bin
+      nodePackages.typescript-language-server
     ];
     sessionPath = [
       "$HOME/.local/bin"
