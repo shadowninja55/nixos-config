@@ -24,8 +24,7 @@
     }; in with pkgs.vimPlugins; [
       nvim-lspconfig
       lspkind-nvim
-      completion-nvim
-      completion-buffers
+      nvim-compe
       telescope-nvim
       telescope-fzy-native-nvim
       plenary-nvim
