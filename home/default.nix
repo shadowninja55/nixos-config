@@ -37,6 +37,7 @@
       neofetch
       lunar-client
       nix-prefetch-scripts
+      mpv
     ];
     sessionPath = [
       "$HOME/.local/bin"
