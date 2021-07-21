@@ -114,6 +114,7 @@
           }
         ];
       }];
+      extraConfig = "Defaults env_reset,pwfeedback";
     };
     pam.services.lightdm.enableGnomeKeyring = true;
     polkit.enable = true;
