@@ -76,6 +76,7 @@
     initExtra = ''
       xrandr --output DisplayPort-2 --mode 1920x1080 --rate 143.98
       xset r rate 250 40
+      setxkbmap -option "caps:swapescape"
       feh --bg-scale $HOME/pictures/dracula.png
     '';
   };
