@@ -32,7 +32,7 @@
       vim-fugitive
       dracula-nvim
       nvim-web-devicons
-      lualine-nvim
+      feline-nvim
       nvim-bufferline-lua
       nvim-tree-lua
       nvim-treesitter
