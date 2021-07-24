@@ -28,6 +28,7 @@
       gnome.seahorse
       bitwarden
       mpv
+      anydesk
 
       gh
       ranger

@@ -38,7 +38,7 @@
       nvim-treesitter
       nim-vim
       vim-python-pep8-indent
-      v-vim
+      # v-vim
       vim-nix
       i3config-vim
       lexima-vim
