@@ -52,6 +52,7 @@
       require "options"
       require "keymaps"
       require "utility"
+      require "statusline"
       
     '';
   };
