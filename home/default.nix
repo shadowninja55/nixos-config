@@ -45,6 +45,7 @@
       nodePackages.vscode-css-languageserver-bin
       nodePackages.typescript-language-server
       rust-analyzer
+      sumneko-lua-language-server
     ];
     sessionPath = [
       "$HOME/.local/bin"
