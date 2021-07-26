@@ -97,7 +97,7 @@
         "type": "github"
       }
     },
-    "rnix-lsp-git": {
+    "rnix-lsp": {
       "inputs": {
         "naersk": "naersk",
         "nixpkgs": "nixpkgs_3",
@@ -122,7 +122,7 @@
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "nur": "nur",
-        "rnix-lsp-git": "rnix-lsp-git"
+        "rnix-lsp": "rnix-lsp"
       }
     },
     "utils": {

@@ -20,14 +20,15 @@
     splashImage = theme + "/background.png";
   };
 
-  networking.hostName = "nixos";
-  networking.networkmanager.enable = true;
-
   time.timeZone = "America/New_York";
 
-  networking.useDHCP = false;
-  networking.interfaces.enp3s0.useDHCP = true;
-  networking.interfaces.wlp4s0.useDHCP = true;
+  networking = {
+    hostName = "nixos";
+    networkmanager.enable = true;
+    useDHCP = false;
+    interfaces.enp3s0.useDHCP = true;
+    interfaces.wlp4s0.useDHCP = true;
+  };
 
   hardware = {
     pulseaudio.support32Bit = true;

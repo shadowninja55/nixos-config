@@ -40,7 +40,7 @@
 
       pulseaudio
       pyright
-      rnix-lsp-git
+      rnix-lsp
       nodePackages.vscode-html-languageserver-bin
       nodePackages.vscode-css-languageserver-bin
       nodePackages.typescript-language-server

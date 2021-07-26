@@ -13,7 +13,7 @@
         rev = "2f98ce06c359fa3f9c34d274615b3f269f89e55c";
         sha256 = "1grnkar29hydq3idmd3w1v3bsac9byj467fdygmi01khp2klqgv6";
       };
-    }; in let v-vim = pkgs.vimUtils.buildVimPlugin {
+    }; v-vim = pkgs.vimUtils.buildVimPlugin {
       name = "v-vim";
       src = pkgs.fetchFromGitHub {
         owner = "ollykel";
