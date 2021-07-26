@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, rnix-lsp-git, ... }:
 
 {
   imports = [
@@ -40,7 +40,7 @@
 
       pulseaudio
       pyright
-      rnix-lsp
+      rnix-lsp-git
       nodePackages.vscode-html-languageserver-bin
       nodePackages.vscode-css-languageserver-bin
       nodePackages.typescript-language-server

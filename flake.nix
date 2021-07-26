@@ -6,11 +6,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nur.url = "github:nix-community/NUR";
+    rnix-lsp-git.url = "github:nix-community/rnix-lsp";
   };
-  outputs = { self, nixpkgs, home-manager, nur, ... }: {
+  outputs = { self, nixpkgs, home-manager, nur, rnix-lsp-git, ... }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs.nixpkgs = nixpkgs;
+      specialArgs = {
+        inherit nixpkgs rnix-lsp-git;
+      };
       modules = [
         { nixpkgs.overlays = [ nur.overlay ]; }
         ({ pkgs, ... }:

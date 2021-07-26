@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, nixpkgs, lib, ... }:
 
 {
   programs.neovim = {
@@ -25,6 +25,7 @@
       nvim-lspconfig
       lspkind-nvim
       nvim-compe
+      lsp_signature-nvim
       telescope-nvim
       telescope-fzy-native-nvim
       plenary-nvim
