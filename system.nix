@@ -7,7 +7,6 @@
 
   boot.loader.grub = rec {
     enable = true;
-    version = 2;
     device = "/dev/sda"; 
     useOSProber = true; 
     gfxmodeBios = "1920x1080";
@@ -26,8 +25,10 @@
     hostName = "nixos";
     networkmanager.enable = true;
     useDHCP = false;
-    interfaces.enp3s0.useDHCP = true;
-    interfaces.wlp4s0.useDHCP = true;
+    interfaces = {
+      enp3s0.useDHCP = true;
+      wlp4s0.useDHCP = true;
+    };
   };
 
   hardware = {
@@ -39,10 +40,7 @@
     };
   };
 
-  zramSwap = {
-    enable = true;
-    algorithm = "lz4";
-  };
+  zramSwap.enable = true;
 
   services.xserver = {
     enable = true;
@@ -64,7 +62,7 @@
       package = pkgs.i3-gaps;
       extraPackages = with pkgs; [
         rofi
-      	polybar
+        polybar
         picom
         dunst
         libnotify
@@ -79,13 +77,13 @@
       mouse.middleEmulation = false;
     };
     config = ''
-      Section "InputClass"
-        Identifier "mouse accel"
-        Driver "libinput"
-        MatchIsPointer "on"
-        Option "AccelProfile" "flat"
-        Option "AccelSpeed" "0"
-      EndSection
+    Section "InputClass"
+    Identifier "mouse accel"
+    Driver "libinput"
+    MatchIsPointer "on"
+    Option "AccelProfile" "flat"
+    Option "AccelSpeed" "0"
+    EndSection
     '';
     layout = "us,es";
     xkbOptions = "grp:win_win_space_toggle";
@@ -96,8 +94,10 @@
 
   services.pipewire = {
     enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
+    alsa = {
+      enable = true;
+      support32Bit = true;
+    };
     pulse.enable = true;
   };
 
@@ -161,7 +161,7 @@
   nix = {
     package = pkgs.nixUnstable;
     extraOptions = ''
-      experimental-features = nix-command flakes
+    experimental-features = nix-command flakes
     '';
     registry.nixpkgs.flake = nixpkgs;
   };
