@@ -157,7 +157,7 @@
           };
           close = {
             text = "%{T2}";
-            foreground = "#8be9fd";
+            foreground = "#50fa7b";
           };
           separator = {
             text = "|";
