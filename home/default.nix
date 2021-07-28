@@ -8,7 +8,7 @@
     ./programs/kitty.nix
     ./programs/neovim.nix
     ./programs/picom.nix
-    ./programs/poybar.nix
+    ./programs/polybar.nix
     ./programs/rofi.nix
     ./programs/spotifyd.nix
   ];
