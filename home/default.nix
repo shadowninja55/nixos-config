@@ -27,7 +27,7 @@
       gnome.seahorse
       bitwarden
       mpv
-      anydesk
+      virt-manager
 
       gh
       ranger

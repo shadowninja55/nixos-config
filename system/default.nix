@@ -40,6 +40,8 @@
     };
   };
 
+  virtualisation.libvirtd.enable = true;
+
   zramSwap.enable = true;
 
   services.xserver = {
@@ -109,6 +111,7 @@
         "wheel"
         "networkmanager"
         "power"
+        "libvirtd"
       ];
       shell = pkgs.fish;
     };
