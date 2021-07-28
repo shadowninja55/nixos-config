@@ -3,6 +3,6 @@
 {
   programs.rofi = {
     enable = true;
-    theme = ./dots/dracula.rasi;
+    theme = ../dotfiles/dracula.rasi;
   };
 }
