@@ -2,15 +2,15 @@
 
 {
   imports = [
-    ./i3.nix
-    ./polybar.nix
-    ./dunst.nix
-    ./picom.nix
-    ./neovim.nix
-    ./spotifyd.nix
-    ./rofi.nix
-    ./kitty.nix
-    ./fish.nix
+    ./programs/dunst.nix
+    ./programs/fish.nix
+    ./programs/i3.nix
+    ./programs/kitty.nix
+    ./programs/neovim.nix
+    ./programs/picom.nix
+    ./programs/poybar.nix
+    ./programs/rofi.nix
+    ./programs/spotifyd.nix
   ];
   programs.home-manager.enable = true;
 
@@ -34,7 +34,6 @@
       tldr
       spotify-tui
       bottom
-      neofetch
       nix-prefetch-scripts
 
       pulseaudio
@@ -51,7 +50,7 @@
     ];
     sessionVariables = {
       HOME_NIX = "$HOME/.config/nixos/home/default.nix";
-      SYS_NIX = "$HOME/.config/nixos/system.nix";
+      SYS_NIX = "$HOME/.config/nixos/system/default.nix";
       PI = "192.168.0.198";
     };
   };
@@ -64,11 +63,11 @@
     enable = true;
     userDirs = {
       enable = true;
-      desktop = "~/desktop";
-      download = "~/downloads";
-      documents = "~/documents";
-      videos = "~/videos";
-      pictures = "~/pictures";
+      desktop = "$HOME/desktop";
+      download = "$HOME/downloads";
+      documents = "$HOME/documents";
+      videos = "$HOME/videos";
+      pictures = "$HOME/pictures";
     };
   };
 

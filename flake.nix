@@ -33,7 +33,7 @@
             imports = [ nur-no-pkgs.repos.kira-bruneau.modules.lightdm-webkit2-greeter ];
           }
           )
-          ./system.nix
+          ./system
           home-manager.nixosModules.home-manager {
             home-manager = {
               useGlobalPkgs = true;
