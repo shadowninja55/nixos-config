@@ -14,10 +14,9 @@
   ];
   programs.home-manager.enable = true;
 
-  home.username = "mark";
-  home.homeDirectory = "/home/mark";
-
   home = {
+    username = "mark";
+    homeDirectory = "/home/mark";
     stateVersion = "21.11";
     packages = with pkgs; [
       firefox

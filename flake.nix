@@ -7,7 +7,7 @@
     };
     nur.url = "github:nix-community/NUR";
     rnix-lsp.url = "github:nix-community/rnix-lsp";
-  };
+  };;
   outputs = { self, nixpkgs, home-manager, nur, ... } @inputs: 
   let 
     system = "x86_64-linux";

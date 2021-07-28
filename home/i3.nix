@@ -1,4 +1,5 @@
 { pkgs, lib, ... }:
+
 {
   xsession.windowManager.i3 = {
     enable = true;
@@ -33,11 +34,11 @@
         text = color;
         childBorder = color;
         indicator = color;
-      }; in {
+      }; in rec {
         focused = repeatColor "#bbbbbb";
         focusedInactive = repeatColor "#44475a";
         urgent = repeatColor "#bd93f9";
-        unfocused = repeatColor "#44475a";
+        unfocused = focusedInactive;
       };
       gaps = {
         inner = 10;
