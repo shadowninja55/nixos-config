@@ -49,6 +49,10 @@
     videoDrivers = [ "amdgpu" ];
     displayManager.lightdm = {
       enable = true;
+      autoLogin = {
+        enable = true;
+        user = "mark";
+      };
       /* greeters.webkit2 = {
         enable = true;
         webkitTheme = builtins.fetchTarball {
