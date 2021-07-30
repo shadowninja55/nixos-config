@@ -24,6 +24,7 @@
       element-desktop
       steam
       lunar-client
+      grapejuice
       gnome.seahorse
       bitwarden
       mpv
