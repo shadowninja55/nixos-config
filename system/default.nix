@@ -47,21 +47,12 @@
   services.xserver = {
     enable = true;
     videoDrivers = [ "amdgpu" ];
-    displayManager.lightdm = {
-      enable = true;
+    displayManager = {
+      lightdm.enable = true;
       autoLogin = {
         enable = true;
         user = "mark";
       };
-      /* greeters.webkit2 = {
-        enable = true;
-        webkitTheme = builtins.fetchTarball {
-          url = "https://github.com/Litarvan/lightdm-webkit-theme-litarvan/releases/download/v3.2.0/lightdm-webkit-theme-litarvan-3.2.0-nixos.tar.gz";
-          sha256 = "10j7vg11mhs0mhl9r4j01zfq8naszkdhanxf84b02m1irz063wsd";
-        };
-        debugMode = true;
-        detectThemeErrors = false;
-      }; */
     };
     windowManager.i3 = {
       enable = true;
@@ -168,7 +159,7 @@
   nix = {
     package = pkgs.nixUnstable;
     extraOptions = ''
-    experimental-features = nix-command flakes
+      experimental-features = nix-command flakes
     '';
     registry.nixpkgs.flake = nixpkgs;
   };
