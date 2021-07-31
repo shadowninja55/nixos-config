@@ -5,16 +5,16 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nur.url = "github:nix-community/NUR";
     rnix-lsp.url = "github:nix-community/rnix-lsp";
+    grapejuice-patched.url = "github:shadowninja55/grapejuice-patched";
   };
-  outputs = { self, nixpkgs, home-manager, nur, ... } @inputs: 
+  outputs = { self, nixpkgs, home-manager, ... } @inputs: 
   let 
     system = "x86_64-linux";
     overlays = [
-      nur.overlay
       (final: prev: {
         rnix-lsp = inputs.rnix-lsp.defaultPackage.${system};
+        grapejuice-patched = inputs.grapejuice-patched.defaultPackage.${system};
       })
     ]; in {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem rec {
@@ -24,15 +24,6 @@
         };
         modules = [
           { nixpkgs = { inherit overlays; }; }
-          ({ pkgs, ... }:
-          let
-            nur-no-pkgs = import nur {
-              nurpkgs = import nixpkgs { system = "x86_64-linux"; };
-            };
-          in {
-            imports = [ nur-no-pkgs.repos.kira-bruneau.modules.lightdm-webkit2-greeter ];
-          }
-          )
           ./system
           home-manager.nixosModules.home-manager {
             home-manager = {

@@ -82,18 +82,19 @@
         "type": "indirect"
       }
     },
-    "nur": {
+    "oglfPatches": {
+      "flake": false,
       "locked": {
-        "lastModified": 1627313215,
-        "narHash": "sha256-X5uSlkqsHI7P10y+za3WMgSDYVoZsrH+viEGgq9HzhE=",
-        "owner": "nix-community",
-        "repo": "NUR",
-        "rev": "509deb64a3f746d9b38bcd469a1255c19ee6a32c",
+        "lastModified": 1627240972,
+        "narHash": "sha256-fv/+DLiOPiASlSKyHxIf4pALjvLpND47QGKbauBZTv8=",
+        "owner": "openglfreak",
+        "repo": "wine-tkg-userpatches",
+        "rev": "8dfcbea14e3089fea04d18e7a28c2f3f3ad4cb4e",
         "type": "github"
       },
       "original": {
-        "owner": "nix-community",
-        "repo": "NUR",
+        "owner": "openglfreak",
+        "repo": "wine-tkg-userpatches",
         "type": "github"
       }
     },
@@ -121,8 +122,25 @@
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "nur": "nur",
-        "rnix-lsp": "rnix-lsp"
+        "oglfPatches": "oglfPatches",
+        "rnix-lsp": "rnix-lsp",
+        "tkgPatches": "tkgPatches"
+      }
+    },
+    "tkgPatches": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1627663715,
+        "narHash": "sha256-97jYGwqEfP2ZIghXuZ7xlQ9XgYVTAuuO5rjyhghmSc8=",
+        "owner": "Frogging-Family",
+        "repo": "wine-tkg-git",
+        "rev": "f9a601896b16f0611b3960ce680b7c683d1c6752",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Frogging-Family",
+        "repo": "wine-tkg-git",
+        "type": "github"
       }
     },
     "utils": {
