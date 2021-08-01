@@ -44,7 +44,7 @@
         inner = 10;
         outer = 0;
       };
-      defaultWorkspace = "workspace 1";
+      defaultWorkspace = "workspace number 1";
       startup = [
         {
           command = "${pkgs.systemd}/bin/systemctl --user restart polybar";
