@@ -18,6 +18,7 @@
         markup = "full";
         ignore_newline = false;
         mouse_left_click = "do_action, close_current";
+        stack_duplicates = false;
       };
       urgency_low = {
         background = "#282a36";
