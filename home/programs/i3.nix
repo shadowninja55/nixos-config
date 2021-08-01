@@ -44,13 +44,10 @@
         inner = 10;
         outer = 0;
       };
+      defaultWorkspace = "workspace 1";
       startup = [
         {
           command = "${pkgs.systemd}/bin/systemctl --user restart polybar";
-          notification = false;
-        }
-        {
-          command = "${pkgs.i3-gaps}/bin/i3-msg workspace 1";
           notification = false;
         }
       ];
