@@ -146,7 +146,6 @@
       kitty
       gcc
       gnumake
-      patchelf
       polkit
     ];
     variables = {

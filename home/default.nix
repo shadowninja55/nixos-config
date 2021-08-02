@@ -36,6 +36,7 @@
       spotify-tui
       bottom
       nix-prefetch-scripts
+      xboxdrv
 
       pulseaudio
       pyright
