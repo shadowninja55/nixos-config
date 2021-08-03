@@ -7,14 +7,32 @@
     };
     rnix-lsp.url = "github:nix-community/rnix-lsp";
     grapejuice-patched.url = "github:shadowninja55/grapejuice-patched";
+    dracula-nvim = {
+      url = "github:Mofiqul/dracula.nvim";
+      flake = false;
+    };
+    v-vim = {
+      url = "github:ollykel/v-vim";
+      flake = false;
+    };
   };
   outputs = { self, nixpkgs, home-manager, ... } @inputs: 
   let 
     system = "x86_64-linux";
     overlays = [
       (final: prev: {
-        rnix-lsp = inputs.rnix-lsp.defaultPackage.${system};
-        grapejuice-patched = inputs.grapejuice-patched.defaultPackage.${system};
+        rnix-lsp = inputs.rnix-lsp.defaultPackage."${system}";
+        grapejuice-patched = inputs.grapejuice-patched.defaultPackage."${system}";
+        vimPlugins = prev.vimPlugins // {
+          dracula-nvim = prev.vimUtils.buildVimPlugin {
+            name = "dracula.nvim";
+            src = inputs.dracula-nvim;
+          };
+          v-vim = prev.vimUtils.buildVimPlugin {
+            name = "v-vim";
+            src = inputs.v-vim;
+          };
+        };
       })
     ]; in {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem rec {

@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "dracula-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1622812531,
+        "narHash": "sha256-Zj9Mp7hwBhDr880dQ6RfiSm9xg58tNriwM3DJLKaNr8=",
+        "owner": "Mofiqul",
+        "repo": "dracula.nvim",
+        "rev": "2f98ce06c359fa3f9c34d274615b3f269f89e55c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Mofiqul",
+        "repo": "dracula.nvim",
+        "type": "github"
+      }
+    },
     "grapejuice-patched": {
       "inputs": {
         "nixpkgs": "nixpkgs"
@@ -137,10 +153,12 @@
     },
     "root": {
       "inputs": {
+        "dracula-nvim": "dracula-nvim",
         "grapejuice-patched": "grapejuice-patched",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs_2",
-        "rnix-lsp": "rnix-lsp"
+        "rnix-lsp": "rnix-lsp",
+        "v-vim": "v-vim"
       }
     },
     "utils": {
@@ -155,6 +173,22 @@
       "original": {
         "owner": "numtide",
         "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "v-vim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1622591649,
+        "narHash": "sha256-qvMQmu0bzaM3SWyxhDoyWd1MwwmFUaFtf9xG9Lk1pLw=",
+        "owner": "ollykel",
+        "repo": "v-vim",
+        "rev": "f7f3a9a8402ae7276df2e4bc8b3bad62d16874b5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ollykel",
+        "repo": "v-vim",
         "type": "github"
       }
     }
