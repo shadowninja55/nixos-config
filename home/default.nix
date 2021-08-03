@@ -1,4 +1,4 @@
-{ pkgs, rnix-lsp-git, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
