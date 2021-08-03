@@ -23,7 +23,12 @@
           inherit nixpkgs;
         };
         modules = [
-          { nixpkgs = { inherit overlays; }; }
+          { 
+            nixpkgs = { 
+              inherit overlays; 
+              config.allowUnfree = true;
+            }; 
+          }
           ./system
           home-manager.nixosModules.home-manager {
             home-manager = {
