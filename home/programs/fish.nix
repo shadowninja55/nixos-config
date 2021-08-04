@@ -16,6 +16,7 @@
     ];
     shellAliases = {
       ssh = "kitty +kitten ssh";
+      ls = "exa";
     };
     shellInit = ''
       set fish_greeting

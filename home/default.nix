@@ -37,6 +37,7 @@
       bottom
       nix-prefetch-scripts
       xboxdrv
+      exa
 
       pulseaudio
       pyright
