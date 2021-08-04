@@ -44,7 +44,7 @@
         inner = 10;
         outer = 0;
       };
-      fonts.size = 3.0;
+      fonts.size = 0.0;
       defaultWorkspace = "workspace number 1";
       startup = [
         {
