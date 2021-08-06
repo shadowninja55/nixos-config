@@ -38,6 +38,7 @@
       nix-prefetch-scripts
       xboxdrv
       exa
+      zathura
 
       pulseaudio
       pyright
