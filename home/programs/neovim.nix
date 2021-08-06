@@ -21,7 +21,7 @@
       feline-nvim
       nvim-bufferline-lua
       nvim-tree-lua
-      (nvim-treesitter.withPlugins (_: pkgs.tree-sitter.allGrammars))
+      nvim-treesitter
       nim-vim
       vim-python-pep8-indent
       v-vim
