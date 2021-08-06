@@ -26,6 +26,7 @@
       vim-python-pep8-indent
       v-vim
       vim-nix
+      purescript-vim
       i3config-vim
       lexima-vim
       vim-closetag
