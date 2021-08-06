@@ -46,6 +46,7 @@
       nodePackages.vscode-css-languageserver-bin
       nodePackages.typescript-language-server
       nodePackages.purescript-language-server
+      haskell-language-server
       rust-analyzer
       sumneko-lua-language-server
     ];
