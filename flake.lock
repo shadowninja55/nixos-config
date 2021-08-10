@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "dandellion": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1628628733,
+        "narHash": "sha256-apEHK2CqV9P2AekPC7LctVtltEioNRaCrJtOmW25Tpk=",
+        "ref": "master",
+        "rev": "63a68321d74cf94013219149fb88d864d1c4e8a7",
+        "revCount": 152,
+        "type": "git",
+        "url": "https://git.dodsorf.as/Dandellion/NUR"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.dodsorf.as/Dandellion/NUR"
+      }
+    },
     "dracula-nvim": {
       "flake": false,
       "locked": {
@@ -168,6 +184,7 @@
     },
     "root": {
       "inputs": {
+        "dandellion": "dandellion",
         "dracula-nvim": "dracula-nvim",
         "grapejuice-patched": "grapejuice-patched",
         "home-manager": "home-manager",
