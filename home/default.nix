@@ -29,6 +29,7 @@
       bitwarden
       mpv
       virt-manager
+      nur.repos.dandellion.soundux
 
       gh
       ranger

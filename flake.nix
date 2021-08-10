@@ -5,6 +5,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nur.url = "github:nix-community/NUR";
     rnix-lsp.url = "github:nix-community/rnix-lsp";
     grapejuice-patched.url = "github:shadowninja55/grapejuice-patched";
     dracula-nvim = {
@@ -15,8 +16,12 @@
       url = "github:ollykel/v-vim";
       flake = false;
     };
+    dandellion = {
+      url = "git+https://git.dodsorf.as/Dandellion/NUR";
+      flake = false;
+    };
   };
-  outputs = { self, nixpkgs, home-manager, ... } @inputs: 
+  outputs = { self, nixpkgs, home-manager, nur, ... } @inputs: 
   let 
     system = "x86_64-linux";
     overlays = [
@@ -32,6 +37,11 @@
             name = "v-vim";
             src = inputs.v-vim;
           };
+        };
+        nur = import nur {
+          nurpkgs = prev;
+          pkgs = prev;
+          repoOverrides.dandellion = import inputs.dandellion { pkgs = prev; };
         };
       })
     ]; in {
