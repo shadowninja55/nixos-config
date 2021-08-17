@@ -40,6 +40,7 @@
       xboxdrv
       exa
       zathura
+      watson
 
       pulseaudio
       pyright
