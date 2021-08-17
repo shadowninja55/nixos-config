@@ -34,13 +34,19 @@
       presence-nvim
       nvim-ts-rainbow
     ];
-    extraConfig = ''
+    extraConfig = let
+      luaRequire = module: builtins.readFile (builtins.toString 
+        ../dotfiles/neovim + "/${module}.lua");
+      luaConfig = builtins.concatStringsSep "\n" (map luaRequire [
+        "theming"
+        "options"
+        "keymaps"
+        "utility"
+        "statusline"
+      ]);
+    in ''
       lua << 
-      require "theming"
-      require "options"
-      require "keymaps"
-      require "utility"
-      require "statusline"
+      ${luaConfig}
       
     '';
   };
