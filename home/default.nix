@@ -24,12 +24,11 @@
       element-desktop
       steam
       lunar-client
-      grapejuice-patched
+      grapejuice
       gnome.seahorse
       bitwarden
       mpv
       virt-manager
-      nur.repos.dandellion.soundux
 
       gh
       ranger
