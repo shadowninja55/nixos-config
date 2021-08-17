@@ -1,21 +1,5 @@
 {
   "nodes": {
-    "dandellion": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1628628733,
-        "narHash": "sha256-apEHK2CqV9P2AekPC7LctVtltEioNRaCrJtOmW25Tpk=",
-        "ref": "master",
-        "rev": "63a68321d74cf94013219149fb88d864d1c4e8a7",
-        "revCount": 152,
-        "type": "git",
-        "url": "https://git.dodsorf.as/Dandellion/NUR"
-      },
-      "original": {
-        "type": "git",
-        "url": "https://git.dodsorf.as/Dandellion/NUR"
-      }
-    },
     "dracula-nvim": {
       "flake": false,
       "locked": {
@@ -29,24 +13,6 @@
       "original": {
         "owner": "Mofiqul",
         "repo": "dracula.nvim",
-        "type": "github"
-      }
-    },
-    "grapejuice-patched": {
-      "inputs": {
-        "nixpkgs": "nixpkgs"
-      },
-      "locked": {
-        "lastModified": 1627692715,
-        "narHash": "sha256-epdxwDpuEE/TscRA0kulGBtxEhNKqrpLhO05slDUeCk=",
-        "owner": "shadowninja55",
-        "repo": "grapejuice-patched",
-        "rev": "cc2efc453ae903c99549394f4e8d545af4735c96",
-        "type": "github"
-      },
-      "original": {
-        "owner": "shadowninja55",
-        "repo": "grapejuice-patched",
         "type": "github"
       }
     },
@@ -72,7 +38,7 @@
     },
     "naersk": {
       "inputs": {
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_2"
       },
       "locked": {
         "lastModified": 1605267184,
@@ -90,21 +56,6 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1627692022,
-        "narHash": "sha256-C8EOif02hpY68MdJ4oHr3Tp0D/6HwnPWvhhwTPd1lXs=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "6463828755b6a03f6af7e549216bef837b03b3e1",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
         "lastModified": 1627391865,
         "narHash": "sha256-tPoWBO9Nzu3wuX37WcnctzL6LoDCErJLnfLGqqmXCm4=",
         "owner": "nixos",
@@ -117,6 +68,20 @@
         "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1605988311,
+        "narHash": "sha256-PA+kgq46NApOAJlmBNJHs5DwsIrY+jodM0e4g7VtXyY=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "2247d824fe07f16325596acc7faa286502faffd1",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
       }
     },
     "nixpkgs_3": {
@@ -133,39 +98,10 @@
         "type": "indirect"
       }
     },
-    "nixpkgs_4": {
-      "locked": {
-        "lastModified": 1605988311,
-        "narHash": "sha256-PA+kgq46NApOAJlmBNJHs5DwsIrY+jodM0e4g7VtXyY=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "2247d824fe07f16325596acc7faa286502faffd1",
-        "type": "github"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
-      }
-    },
-    "nur": {
-      "locked": {
-        "lastModified": 1628603285,
-        "narHash": "sha256-FjQ0rXX2U4qBw19yIy2WdUXthvhAL98YdM7sBVWEtKE=",
-        "owner": "nix-community",
-        "repo": "NUR",
-        "rev": "68efb3c88777ec325eb85efc15680d0445c04d01",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "NUR",
-        "type": "github"
-      }
-    },
     "rnix-lsp": {
       "inputs": {
         "naersk": "naersk",
-        "nixpkgs": "nixpkgs_4",
+        "nixpkgs": "nixpkgs_3",
         "utils": "utils"
       },
       "locked": {
@@ -184,12 +120,9 @@
     },
     "root": {
       "inputs": {
-        "dandellion": "dandellion",
         "dracula-nvim": "dracula-nvim",
-        "grapejuice-patched": "grapejuice-patched",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs_2",
-        "nur": "nur",
+        "nixpkgs": "nixpkgs",
         "rnix-lsp": "rnix-lsp",
         "v-vim": "v-vim"
       }

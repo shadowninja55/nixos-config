@@ -29,6 +29,7 @@
       bitwarden
       mpv
       virt-manager
+      obs-studio
 
       gh
       ranger
