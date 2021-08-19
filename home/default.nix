@@ -11,6 +11,7 @@
     ./programs/polybar.nix
     ./programs/rofi.nix
     ./programs/spotifyd.nix
+    ./programs/zathura.nix
   ];
   programs.home-manager.enable = true;
 
