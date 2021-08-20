@@ -22,7 +22,6 @@
     stateVersion = "21.11";
     packages = with pkgs; [
       firefox
-      discord
       element-desktop
       steam
       lunar-client
@@ -64,10 +63,6 @@
       PI = "192.168.0.198";
     };
   };
-
-  /* nixpkgs = {
-    overlays = [(self: super: { discord-canary = super.discord-canary.overrideAttrs (_: { src = builtins.fetchTarball "https://discord.com/api/download/canary?platform=linux&format=tar.gz"; });})];
-  }; */
 
   xdg = {
     enable = true;

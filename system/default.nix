@@ -47,58 +47,58 @@
 
   zramSwap.enable = true;
 
-  services.xserver = {
-    enable = true;
-    videoDrivers = [ "amdgpu" ];
-    displayManager = {
-      lightdm.enable = true;
-      autoLogin = {
-        enable = true;
-        user = "mark";
+  services = {
+    xserver = {
+      enable = true;
+      videoDrivers = [ "amdgpu" ];
+      displayManager = {
+        lightdm.enable = true;
+        autoLogin = {
+          enable = true;
+          user = "mark";
+        };
       };
+      windowManager.i3 = {
+        enable = true;
+        package = pkgs.i3-gaps;
+        extraPackages = with pkgs; [
+          rofi
+          polybar
+          picom
+          dunst
+          libnotify
+          xclip
+          maim
+          feh
+          lxappearance
+        ];
+      };
+      libinput = {
+        enable = true;
+        mouse.middleEmulation = false;
+      };
+      config = ''
+      Section "InputClass"
+      Identifier "mouse accel"
+      Driver "libinput"
+      MatchIsPointer "on"
+      Option "AccelProfile" "flat"
+      Option "AccelSpeed" "0"
+      EndSection
+      '';
+      layout = "us,es";
+      xkbOptions = "grp:win_win_space_toggle";
     };
-    windowManager.i3 = {
+    pipewire = {
       enable = true;
-      package = pkgs.i3-gaps;
-      extraPackages = with pkgs; [
-        rofi
-        polybar
-        picom
-        dunst
-        libnotify
-        xclip
-        maim
-        feh
-        lxappearance
-      ];
+      alsa = {
+        enable = true;
+        support32Bit = true;
+      };
+      pulse.enable = true;
     };
-    libinput = {
-      enable = true;
-      mouse.middleEmulation = false;
-    };
-    config = ''
-    Section "InputClass"
-    Identifier "mouse accel"
-    Driver "libinput"
-    MatchIsPointer "on"
-    Option "AccelProfile" "flat"
-    Option "AccelSpeed" "0"
-    EndSection
-    '';
-    layout = "us,es";
-    xkbOptions = "grp:win_win_space_toggle";
-  };
-
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
-
-  services.pipewire = {
-    enable = true;
-    alsa = {
-      enable = true;
-      support32Bit = true;
-    };
-    pulse.enable = true;
+    gnome.gnome-keyring.enable = true;
+    openssh.enable = true;
   };
 
   users = {
@@ -114,8 +114,6 @@
       shell = pkgs.fish;
     };
   };
-
-  services.gnome.gnome-keyring.enable = true;
 
   security = {
     rtkit.enable = true;
