@@ -13,6 +13,7 @@
     ./programs/spotifyd.nix
     ./programs/zathura.nix
     ./programs/powercord.nix
+    ./programs/starship.nix
   ];
   programs.home-manager.enable = true;
 
