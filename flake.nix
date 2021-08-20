@@ -7,11 +7,16 @@
     };
     rnix-lsp.url = "github:nix-community/rnix-lsp";
     dracula-nvim = {
-      url = "github:Mofiqul/dracula.nvim";
+      url = "github:mofiqul/dracula.nvim";
       flake = false;
     };
     v-vim = {
       url = "github:ollykel/v-vim";
+      flake = false;
+    };
+    powercord-overlay.url = "github:lavadesu/powercord-overlay";
+    dracula-powercord = {
+      url = "github:slowstab/dracula";
       flake = false;
     };
   };
@@ -32,6 +37,7 @@
           };
         };
       })
+      inputs.powercord-overlay.overlay
     ]; in {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem rec {
         inherit system;
@@ -51,6 +57,9 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               users.mark = import ./home;
+              extraSpecialArgs = {
+                inherit inputs;
+              };
             };
           }
         ];

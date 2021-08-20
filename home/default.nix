@@ -12,6 +12,7 @@
     ./programs/rofi.nix
     ./programs/spotifyd.nix
     ./programs/zathura.nix
+    ./programs/powercord.nix
   ];
   programs.home-manager.enable = true;
 
