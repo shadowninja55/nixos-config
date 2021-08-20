@@ -51,6 +51,10 @@
           command = "${pkgs.systemd}/bin/systemctl --user restart polybar";
           notification = false;
         }
+        {
+          command = "${pkgs.autotiling}/bin/autotiling";
+          notification = false;
+        }
       ];
       focus.newWindow = "focus";
     };
