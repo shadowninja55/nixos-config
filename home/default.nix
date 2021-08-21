@@ -40,7 +40,6 @@
       bottom
       nix-prefetch-scripts
       xboxdrv
-      exa
       zathura
       watson
 
