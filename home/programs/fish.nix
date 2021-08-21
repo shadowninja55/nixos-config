@@ -16,8 +16,8 @@
     ];
     shellAliases = {
       ssh = "kitty +kitten ssh";
-      ls = "${pkgs.exa}";
-      grep = "${pkgs.ripgrep}";
+      ls = "${pkgs.exa}/bin/exa";
+      grep = "${pkgs.ripgrep}/bin/rg";
     };
     shellInit = ''
       set fish_greeting
