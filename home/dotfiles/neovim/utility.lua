@@ -2,9 +2,6 @@
 local lspc = require 'lspconfig'
 lspc.pyright.setup {}
 lspc.rnix.setup {}
-lspc.html.setup {
-  cmd = {'html-languageserver', '--stdio'}
-}
 lspc.cssls.setup {
   cmd = {'css-languageserver', '--stdio'}
 }
@@ -57,7 +54,7 @@ require('bufferline').setup {
 }
 -- tree sitter
 require('nvim-treesitter.configs').setup {
-  ensure_installed = {"bash", "c", "css", "javascript", "json", "lua", "nix", "python", "html", "rust", "toml"}, -- haskell
+  ensure_installed = {"bash", "c", "css", "javascript", "json", "lua", "nix", "python", "rust", "toml"},
   highlight = {
     enable = true,
     disable = {"css"}
