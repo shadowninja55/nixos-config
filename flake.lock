@@ -85,6 +85,22 @@
         "type": "github"
       }
     },
+    "nest-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1629806897,
+        "narHash": "sha256-/AMiEXtC3qEg8EYyrKTEQ3NtLss/y42E7VW2TdlHe8g=",
+        "owner": "lionc",
+        "repo": "nest.nvim",
+        "rev": "fbd999abfeb717d6d1c7308cc55ecfb581fa5161",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lionc",
+        "repo": "nest.nvim",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1627391865,
@@ -206,6 +222,7 @@
         "dracula-nvim": "dracula-nvim",
         "dracula-powercord": "dracula-powercord",
         "home-manager": "home-manager",
+        "nest-nvim": "nest-nvim",
         "nixpkgs": "nixpkgs",
         "powercord-overlay": "powercord-overlay",
         "rnix-lsp": "rnix-lsp",
