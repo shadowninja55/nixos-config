@@ -54,8 +54,8 @@ nest.applyKeymaps {
   { '[e', '<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>' },
   { ']e', '<cmd>lua vim.lsp.diagnostic.goto_next()<cr>' },
   { 'g', {
-    'd', '<cmd>lua vim.lsp.buf.definition()<cr>',
-    'y', '<cmd>lua vim.lsp.buf.type_definition()<cr>'
+    { 'd', '<cmd>lua vim.lsp.buf.definition()<cr>' },
+    { 'y', '<cmd>lua vim.lsp.buf.type_definition()<cr>' }
   }},
   { 'qf', '<cmd>lua vim.lsp.buf.code_action()<CR>' },
   { mode = 'i', {
