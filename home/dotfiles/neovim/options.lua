@@ -15,6 +15,7 @@ g.python_highlight_all = 1
 g.python_recommended_style = 0
 g.rust_recommended_style = 0
 g.mapleader = ' '
+g.lexima_no_default_rules = 1
 
 vim.cmd 'filetype plugin indent on'
 o.tabstop = 2

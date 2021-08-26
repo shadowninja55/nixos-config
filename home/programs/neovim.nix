@@ -22,7 +22,6 @@
       nvim-bufferline-lua
       nvim-tree-lua
       nvim-treesitter
-      nim-vim
       vim-python-pep8-indent
       v-vim
       vim-nix
@@ -31,6 +30,7 @@
       vim-closetag
       presence-nvim
       nvim-ts-rainbow
+      nest-nvim
     ];
     extraConfig = let
       luaRequire = module: builtins.readFile (builtins.toString 

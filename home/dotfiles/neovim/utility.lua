@@ -71,6 +71,9 @@ require('nvim-treesitter.configs').setup {
 -- telescope
 require('telescope').load_extension('fzy_native')
 
+-- lexima
+vim.fn['lexima#set_default_rules']()
+
 -- file runners
 vim.cmd 'autocmd FileType python nmap <F5> <Esc>:w<CR>:!python %<CR>'
 vim.cmd 'autocmd FileType vlang nmap <F5> <Esc>:w<CR>:!v run %<CR>'

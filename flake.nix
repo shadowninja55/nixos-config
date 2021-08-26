@@ -14,6 +14,10 @@
       url = "github:ollykel/v-vim";
       flake = false;
     };
+    nest-nvim = {
+      url = "github:lionc/nest.nvim";
+      flake = false;
+    };
     powercord-overlay.url = "github:lavadesu/powercord-overlay";
     dracula-powercord = {
       url = "github:slowstab/dracula";
@@ -34,6 +38,10 @@
           v-vim = prev.vimUtils.buildVimPlugin {
             name = "v-vim";
             src = inputs.v-vim;
+          };
+          nest-nvim = prev.vimUtils.buildVimPlugin {
+            name = "nest.nvim";
+            src = inputs.nest-nvim;
           };
         };
       })
