@@ -19,7 +19,7 @@
       dracula-nvim
       nvim-web-devicons
       feline-nvim
-      nvim-bufferline-lua
+      bufferline-nvim
       nvim-tree-lua
       nvim-treesitter
       vim-python-pep8-indent
