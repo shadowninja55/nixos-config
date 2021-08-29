@@ -86,8 +86,9 @@
       Option "AccelSpeed" "0"
       EndSection
       '';
-      layout = "us,es";
-      xkbOptions = "grp:win_win_space_toggle";
+      layout = "us,apl";
+      xkbOptions = "grp:switch";
+      xkbVariant = ",dyalog";
     };
     pipewire = {
       enable = true;
