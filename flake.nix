@@ -23,6 +23,10 @@
       url = "github:slowstab/dracula";
       flake = false;
     };
+    dyalog-nixos = {
+      url = "github:markus1189/dyalog-nixos";
+      flake = false;
+    };
   };
   outputs = { self, nixpkgs, home-manager, ... } @inputs: 
   let 
@@ -46,6 +50,7 @@
         };
       })
       inputs.powercord-overlay.overlay
+      (import "${inputs.dyalog-nixos}/overlay.nix")
     ]; in {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem rec {
         inherit system;

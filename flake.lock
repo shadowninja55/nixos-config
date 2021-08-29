@@ -32,6 +32,22 @@
         "type": "github"
       }
     },
+    "dyalog-nixos": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1630256433,
+        "narHash": "sha256-gf9PfWr3DyqetptJRoRMI0bzkmc1PfYH/4SVj3zvA4Q=",
+        "owner": "markus1189",
+        "repo": "dyalog-nixos",
+        "rev": "1277dd0ec3cfde966a0c3fd8f7ac00278d8b515a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "markus1189",
+        "repo": "dyalog-nixos",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "locked": {
         "lastModified": 1623875721,
@@ -221,6 +237,7 @@
       "inputs": {
         "dracula-nvim": "dracula-nvim",
         "dracula-powercord": "dracula-powercord",
+        "dyalog-nixos": "dyalog-nixos",
         "home-manager": "home-manager",
         "nest-nvim": "nest-nvim",
         "nixpkgs": "nixpkgs",

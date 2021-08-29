@@ -42,6 +42,7 @@
       xboxdrv
       zathura
       watson
+      dyalog
 
       pulseaudio
       pyright
