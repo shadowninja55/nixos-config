@@ -18,6 +18,7 @@
       ssh = "kitty +kitten ssh";
       ls = "${pkgs.exa}/bin/exa";
       grep = "${pkgs.ripgrep}/bin/rg";
+      cd = "z";
     };
     shellInit = ''
       set fish_greeting
