@@ -26,7 +26,6 @@ _G.tab_complete = function()
   end
 end
 
-
 -- nest
 local nest = require 'nest'
 
@@ -60,7 +59,7 @@ nest.applyKeymaps {
   { 'qf', '<cmd>lua vim.lsp.buf.code_action()<CR>' },
   { mode = 'i', {
     { options = { expr = true }, {
-      { '<cr>', 'compe#confirm(lexima#expand("<lt>cr>", "i"))' },
+      { '<cr>', "compe#confirm(lexima#expand('<LT>CR>', 'i'))" },
       { '<s-tab>', 'v:lua.s_tab_complete()' },
       { '<tab>', 'v:lua.tab_complete()' }
     }}
