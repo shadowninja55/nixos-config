@@ -88,7 +88,6 @@
       '';
       layout = "us,apl";
       xkbOptions = "grp:switch";
-      xkbVariant = ",dyalog";
     };
     pipewire = {
       enable = true;
