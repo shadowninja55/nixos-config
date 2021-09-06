@@ -19,6 +19,8 @@
       ls = "${pkgs.exa}/bin/exa";
       grep = "${pkgs.ripgrep}/bin/rg";
       cd = "z";
+      aplkb = "setxkbmap -layout us,apl -option grp:switch";
+      eskb = "setxkbmap -layout us,es -option grp:shift_caps_toggle";
     };
     shellInit = ''
       set fish_greeting

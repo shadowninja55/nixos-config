@@ -68,9 +68,6 @@ require('nvim-treesitter.configs').setup {
   }
 }
 
--- telescope
-require('telescope').load_extension('fzy_native')
-
 -- lexima
 vim.fn['lexima#set_default_rules']()
 

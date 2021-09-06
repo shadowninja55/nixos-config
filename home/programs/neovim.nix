@@ -12,7 +12,6 @@
       nvim-compe
       lsp_signature-nvim
       telescope-nvim
-      telescope-fzy-native-nvim
       plenary-nvim
       popup-nvim
       vim-fugitive
