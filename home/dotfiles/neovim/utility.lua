@@ -14,6 +14,7 @@ lspc.sumneko_lua.setup {
   cmd = {'lua-language-server'}
 }
 lspc.hls.setup {}
+lspc.nimls.setup {}
 
 -- lsp icons
 require('lspkind').init {

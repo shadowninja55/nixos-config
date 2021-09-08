@@ -27,12 +27,13 @@
       element-desktop
       steam
       lunar-client
-      grapejuice
       gnome.seahorse
       bitwarden
       mpv
       virt-manager
       obs-studio
+      godot
+      bluej
 
       gh
       ranger
@@ -44,6 +45,7 @@
       zathura
       watson
       dyalog
+      neofetch
 
       pulseaudio
       pyright
@@ -54,6 +56,7 @@
       # haskell-language-server
       rust-analyzer
       sumneko-lua-language-server
+      nimlsp
     ];
     sessionPath = [
       "$HOME/.local/bin"

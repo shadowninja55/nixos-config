@@ -25,6 +25,7 @@
       v-vim
       vim-nix
       haskell-vim
+      nim-vim
       lexima-vim
       vim-closetag
       presence-nvim
