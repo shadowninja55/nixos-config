@@ -49,7 +49,7 @@ nest.applyKeymaps {
       { 'f', '<cmd>Telescope find_files<cr>' }
     }}
   }},
-  { 'K', '<cmd>lua vim.lsp.buf,hover()<cr>' },
+  { 'K', '<cmd>lua vim.lsp.buf.hover()<cr>' },
   { '[e', '<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>' },
   { ']e', '<cmd>lua vim.lsp.diagnostic.goto_next()<cr>' },
   { 'g', {
