@@ -37,14 +37,17 @@
         vimPlugins = prev.vimPlugins // {
           dracula-nvim = prev.vimUtils.buildVimPlugin {
             name = "dracula.nvim";
+            pname = "dracula-nvim";
             src = inputs.dracula-nvim;
           };
           v-vim = prev.vimUtils.buildVimPlugin {
             name = "v-vim";
+            pname = "v-vim";
             src = inputs.v-vim;
           };
           nest-nvim = prev.vimUtils.buildVimPlugin {
             name = "nest.nvim";
+            pname = "nest-nvim";
             src = inputs.nest-nvim;
           };
         };
